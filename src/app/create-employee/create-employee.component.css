@@ -1,0 +1,28 @@
+
+body{
+  margin: 0 auto;
+  border: 5px double darkgrey;
+  padding: 1%;
+}
+
+label{
+  color:green;
+  font-size: larger;
+  
+}
+  
+#btnadd{
+      margin-top: 18px;
+  }
+
+  
+h3{
+  margin-bottom: 22px;
+  padding: 1%;
+  color: aliceblue;
+  border-radius: 5px;
+  
+}
+ 
+
+ 

@@ -1,0 +1,19 @@
+body{
+    padding: 1%;
+    border: 5px double grey;      
+}
+
+
+th{
+    font-size: small;
+}
+
+td{
+    padding: 1px;
+    font-size:small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+tr{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
