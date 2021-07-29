@@ -2,7 +2,7 @@ body{
     margin: 0 auto;
     border: 5px double darkgrey;
     padding: 1%;
-    background-color: rgba(205, 211, 203, 0.384);
+    background-color: rgba(215, 218, 214, 0.384);
   }
 
 .container{
@@ -29,14 +29,12 @@ input{
 }
 #checkBoxes{
     margin-top: 4px; 
-
-    
-    border: 2px solid green;
 }
 
 #labelAge, #labelInTruth{
-    
-    padding: 1px;
+    border: 1px solid green;
+    padding: 0px;
+    margin: 0px;
 }
 
 #addressDetails, #personalDetails{

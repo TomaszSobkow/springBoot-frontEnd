@@ -16,6 +16,6 @@ export class Employee {
     immersedDate!: any;
     birthDay!: any;
     hope: string = ""; 
-    age: number = 0;
+   
     
 }

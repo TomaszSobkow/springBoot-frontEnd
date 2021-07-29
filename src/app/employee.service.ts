@@ -9,7 +9,7 @@ import { Employee } from './employee';
 })
 export class EmployeeService {
 
- private url: string  = "http://localhost:8080/api/v1/employees/";
+ private url: string  = "http://localhost:8080/api/v1/fullStackEmployees/";
 
   
   constructor( private httpClient: HttpClient){ }

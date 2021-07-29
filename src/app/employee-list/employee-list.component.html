@@ -1,37 +1,33 @@
 <body>
     <h1 class="badge bg-primary text-wrap" style="width: 15rem;">{{title}}</h1>
-    <table class = "table  table table-striped table-hover ">
-        <thead>
-            <tr>
-                <th scope="col"> First Name </th>
-                <th scope="col"> Last  Name </th>
-                <th scope="col"> Email Id</th>
-                <th scope="col"> Mobile</th>
-                <th scope="col"> Town</th>
-                <th scope="col"> Age</th>
-                <th scope="col"> Date Immersed</th>
-                <th scope="col"> Age in truth</th>
-                <th scope="col"> Details </th>
-            </tr>
-        </thead>
 
-        <tbody>
-            <tr  class = "" scope="row" *ngFor="let employee of employees" >
-                <td>{{ employee.firstName }}</td>
-                <td>{{ employee.lastName }}</td>
-                <td>{{ employee.emailId }}</td>
-                <td>{{ employee.mobile }}</td>
-                <td>{{ employee.town }}</td>
-                <td>{{ employee.age }}</td>
-                <td>{{ employee.phone }}</td>
-                <td></td>
-                <td></td>
-               
-                <td>    
-                    <button (click) = "getEmployeeDetails(employee.id)" class = "btn btn-info  btn-sm"> Details </button>
-                </td>
-            </tr>
-        </tbody>
+    <div class = "container">
+        <table class = "table  table table-striped table-hover ">
+            <thead>
+                <tr>
+                    <th scope="col"> First Name </th>
+                    <th scope="col"> Last  Name </th>
+                    <th scope="col"> Email Id</th>
+                    <th scope="col"> Mobile</th>
+                    <th scope="col"> Town</th>
+                    <th scope="col"> Date Immersed</th>
+                    <th scope="col"> Details </th>
+                </tr>
+            </thead>
 
-    </table>
+            <tbody>
+                <tr  class = "" scope="row" *ngFor="let employee of employees" >
+                    <td>{{ employee.firstName }}</td>
+                    <td>{{ employee.lastName }}</td>
+                    <td>{{ employee.emailId }}</td>
+                    <td>{{ employee.mobile }}</td>
+                    <td>{{ employee.town }}</td>
+                    <td>{{ employee.immersedDate }}</td>
+                    <td>    
+                        <button (click) = "getEmployeeDetails(employee.id)" class = "btn btn-info  btn-sm"> Details </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>

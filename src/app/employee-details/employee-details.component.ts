@@ -20,16 +20,17 @@ export class EmployeeDetailsComponent implements OnInit {
   employee!: Employee;
   employees!: Employee[]; 
 
+  age: number = 12;
+  inTruth: number = 13;
   id: number = 0;
   empty: string = 'NO data'
 
-  onSubmit(){ }
-
-  updateEmployee(){
+  onSubmit(){ 
     this.employService.updateEmployee(this.id, this.employee).subscribe( data => {
+      console.log(data);
       this.goToEmployeeList();
-    })
-
+    }, error => console.log(error));
+    
   }
 
    getEmployees(){
@@ -43,14 +44,6 @@ export class EmployeeDetailsComponent implements OnInit {
       console.log(data);
       this.goToEmployeeList();
     })
-  }
-
-  saveEmployee(){
-    this.employService .createEmployee(this.employee).subscribe(data => {
-      console.log(data);
-      this.goToEmployeeList();
-    },
-    error => console.log(error));
   }
 
   goToEmployeeList(){

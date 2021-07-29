@@ -13,6 +13,7 @@ export class EmployeeListComponent implements OnInit {
   constructor(private employService: EmployeeService, private router: Router ) {  }
 
   title =  "employee-List-Component";
+  
   age! : number ; 
   employees: Employee[] = [] ;
 
