@@ -32,9 +32,9 @@ input{
 }
 
 #labelAge, #labelInTruth{
-    border: 1px solid green;
-    padding: 0px;
-    margin: 0px;
+    
+    padding: 10px;
+    
 }
 
 #addressDetails, #personalDetails{

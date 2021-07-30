@@ -1,7 +1,8 @@
 <body>
-    <h1 class="badge bg-primary text-wrap" style="width: 15rem;">{{title}}</h1>
+    
 
     <div class = "container">
+        <h1 class="badge bg-primary text-wrap" style="width: 15rem;">{{title}}</h1>
         <table class = "table  table table-striped table-hover ">
             <thead>
                 <tr>
@@ -24,10 +25,32 @@
                     <td>{{ employee.town }}</td>
                     <td>{{ employee.immersedDate }}</td>
                     <td>    
-                        <button (click) = "getEmployeeDetails(employee.id)" class = "btn btn-info  btn-sm"> Details </button>
+                        <button (click) = "getEmployeeDetails(employee.id)" class = "btn btn-info  btn-sm "> Details </button>
                     </td>
                 </tr>
             </tbody>
+        </table>
+
+        <table class="table caption-top">
+            <thead>
+                <tr>
+                    <th>Details</th>
+                    <th>Details</th>
+                    <th>Details</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+
+           
+            <tbody>
+                <tr>
+                <td>name</td>
+                <td>name</td>
+                <td>name</td>
+                <td>name</td>
+            </tr>
+            </tbody>
+       
         </table>
     </div>
 </body>

@@ -1,9 +1,12 @@
 
+
 <body>   
+    
+    
     <form (ngSubmit) = "onSubmit()"   >
             <div class = "row " id = "genderCheckButtons">     
                 <div class = "col col-8 col-md-9 col-lg-10">
-                    <h3>{{ title }}</h3>
+                    <h3>{{ title }} {{getAge()}}</h3>
                 </div>
 
                 <div class = "row col-4 col-md-3 col-lg-2">   
@@ -76,14 +79,20 @@
                 
                 <div class = "col">
                     <label>Mobile Phone</label>
+                    
                     <input type = "text" class = "form-control form-control-sm"   id = "mobile"
+                    
                     [(ngModel)] = "employee.mobile" name = "mobile" placeholder={{empty}}>
+                   
+                    
                 </div>
 
-                <div class = "col">
+                <div class = "col ">
+                    <span id="basic-addon1">@</span>
                     <label>Email</label>
                     <input type = "text" class = "form-control form-control-sm"   id = "email"
                     [(ngModel)] = "employee.emailId" name = "email" placeholder={{empty}}>
+                    
                 </div>         
             </div>
 
@@ -96,7 +105,7 @@
 
                 <div class = "col col-2 col-lg-1" id="labelInTruth">
                     <label>In truth
-                        <p><b>{{ inTruth }} years</b></p>
+                        <p><b>{{ inTruth }}</b></p>
                     </label  >
                 </div>
            
@@ -108,7 +117,7 @@
 
                 <div class = "col col-4 col-md-2 col-lg-1" id="labelAge">
                     <label>Age
-                        <p><b>{{ age }} years</b></p>
+                        <p><b>{{ age }}</b></p>
                     </label>
                 </div>                 
             
@@ -141,7 +150,6 @@
             <button (click) = "deleteEmployee(employee.id)" class="btn btn-danger" id = "btnDelete"   >Delete Employee</button> 
         </form>
 
-        
 <br>
             <table class="table table-sm">
                 <thead>
@@ -158,14 +166,25 @@
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
+                    <td >Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>  
+
+                  <tr>
+                    <th scope="row">2</th>
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>
-                  </tr>
-                  
+                  </tr>  
                 </tbody>
-              </table>
-        
 
-        
+                <tfoot>
+                    <td><b>TOTAL</b></td>
+                    <td>calculation</td>
+                    <td>calculation</td>
+                </tfoot>
+
+              </table>
+          
     </body>

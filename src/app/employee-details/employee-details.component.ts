@@ -20,15 +20,37 @@ export class EmployeeDetailsComponent implements OnInit {
   employee!: Employee;
   employees!: Employee[]; 
 
-  age: number = 12;
-  inTruth: number = 13;
-  id: number = 0;
-  empty: string = 'NO data'
+   date!: Date ;
+   toDay!:  number;
+   month!:  number;
+   year!:   number;
+
+   age : number = 12;
+   inTruth: number = 13;
+
+   id: number = 0;
+   empty: string = 'NO data'
+
+
+
+   
+   getAge(){
+     this.age = this.date.getFullYear();
+     return this.toDay + "/" + this.month + "/" + this.year;
+     
+   }
+
+   getImmersed(){
+    this.inTruth = this.date.getFullYear();
+   }
+   
+    
 
   onSubmit(){ 
     this.employService.updateEmployee(this.id, this.employee).subscribe( data => {
       console.log(data);
-      this.goToEmployeeList();
+      //this.goToEmployeeList();
+      this.getAge();
     }, error => console.log(error));
     
   }
@@ -51,6 +73,11 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.date = new Date();
+    this.toDay = this.date.getDay();
+    this.month = this.date.getMonth();
+    this.year = this.date.getFullYear();
+   
     this.employee = new Employee();
     this.id = this.activatedRout.snapshot.params['id'];
 
