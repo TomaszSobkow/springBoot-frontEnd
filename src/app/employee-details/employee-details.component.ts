@@ -21,23 +21,32 @@ export class EmployeeDetailsComponent implements OnInit {
   employees!: Employee[]; 
 
    date!: Date ;
+  
    toDay!:  number;
    month!:  number;
    year!:   number;
 
-   age : number = 12;
-   inTruth: number = 13;
+   age : number = 0;
+   inTruth: number = 0;
 
    id: number = 0;
    empty: string = 'NO data'
 
-
+   hour!: number;
+   minute!: number;
+   second!: number;
 
    
+    repeatTime(){
+      
+    }
+
+  showTime(){
+    return this.hour + ":" + this.minute + ":" + this.second; 
+}
+   
    getAge(){
-     this.age = this.date.getFullYear();
-     return this.toDay + "/" + this.month + "/" + this.year;
-     
+     return this.toDay + "-" + this.month + "-" + this.year;
    }
 
    getImmersed(){
@@ -50,7 +59,7 @@ export class EmployeeDetailsComponent implements OnInit {
     this.employService.updateEmployee(this.id, this.employee).subscribe( data => {
       console.log(data);
       //this.goToEmployeeList();
-      this.getAge();
+     
     }, error => console.log(error));
     
   }
@@ -77,6 +86,10 @@ export class EmployeeDetailsComponent implements OnInit {
     this.toDay = this.date.getDay();
     this.month = this.date.getMonth();
     this.year = this.date.getFullYear();
+
+    this.hour = this.date.getHours();
+    this.minute  = this.date.getMinutes();
+    this.second = this.date.getSeconds();
    
     this.employee = new Employee();
     this.id = this.activatedRout.snapshot.params['id'];

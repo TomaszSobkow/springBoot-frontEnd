@@ -10,18 +10,22 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
     CreateEmployeeComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
     
   ],
   providers: [],
